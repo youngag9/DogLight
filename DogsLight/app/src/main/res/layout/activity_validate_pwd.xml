@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.user.dogslight.ValidatePwdActivity">
+
+    <!-- 현재 무슨 일을 하는지 보여주는 창 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="비밀번호 확인"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <!-- 사용자가 해야할 일을 알려주는 textView -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center_horizontal"
+        android:text="개인정보에 접근하려면\n 비밀 번호를 확인해 주세요." />
+
+    <!-- 현재 비밀번호를 입력하는 editText -->
+    <EditText
+        android:id="@+id/currentPwdText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:inputType="textPassword" />
+
+    <!-- 비밀번호가 맞는지 확인하는 버튼 : ValidateRequest를 불러 맞다면,
+        ChangePwdActivity로 이동한다. -->
+    <Button
+        android:id="@+id/pwdValidateButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/colorPrimary"
+        android:text="확인"
+        android:textColor="#ffffff"/>
+
+
+</LinearLayout>

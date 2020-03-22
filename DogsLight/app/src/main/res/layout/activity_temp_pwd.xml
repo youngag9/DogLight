@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.user.dogslight.TempPwdActivity">
+
+    <!-- 현재 무슨 일을 하는지 보여주는 창 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="임시 비밀번호 발급"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 사용자의 아이디와 이메일을 입력받아 확인하는 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/grayline"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <!-- 사용자가 해야할 일을 알려주는 textView -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="id와 이메일주소를 입력해주세요.\n이메일 주소로 인증번호가 발송됩니다."
+            android:textSize="18dp" />
+
+
+        <!-- 아이디를 다루는 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="아이디" />
+
+            <!-- 아이디를 입력받는 editText -->
+            <EditText
+                android:id="@+id/idText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="textVisiblePassword" />
+
+        </LinearLayout>
+
+
+        <!-- 이메일을 다루는 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="이메일" />
+
+            <!-- 이메일을 입력받는 editText -->
+            <EditText
+                android:id="@+id/emailText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="textEmailAddress" />
+
+        </LinearLayout>
+
+        <!-- 인증번호 발송 버튼 : 입력받은 아이디와 이메일이 맞는지 확인하고,
+            맞다면 ValidateEmailRequest를 불러 6자리의 인증번호를 이메일로 알려준다. -->
+        <Button
+            android:id="@+id/sendEmailButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary"
+            android:text="인증번호 발송"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+
+
+    <!-- 인증번호를 확인하고, 임시비밀번호를 발급하는 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        >
+        <!-- 임시비밀번호를 보여주는 textView -->
+        <TextView
+            android:id="@+id/passwordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="이메일 인증을 해주세요."
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"/>
+
+        <!-- 인증번호를 확인하는 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="인증번호" />
+
+            <!-- 인증번호를 입력받는 레이아웃 -->
+            <EditText
+                android:id="@+id/verifyNumText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number" />
+
+            <!-- 인증번호가 확인 버튼 : 이메일로 보낸 인증번호와 사용자가 입력한 값을 비교한다.
+                맞다면, 새로운 6자리 숫자의 임시비밀번호를 알려준다. -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary"
+                android:text="비밀번호 확인"
+                android:textColor="#ffffff"
+                android:id="@+id/verifyNumButton"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <!-- 로그인 화면으로 돌아가는 버튼 -->
+    <TextView
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="40dp"
+        android:text="로그인화면으로 가기"
+        android:textStyle="bold"/>
+</LinearLayout>

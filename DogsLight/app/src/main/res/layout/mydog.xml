@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
+    <!-- MyFragment내의 강아지 목록을 보여주는 listView에 들어가는 항목 -->
+
+    <!-- 아이콘 이미지 -->
+    <ImageView
+        android:id="@+id/dogImage"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/dog_icon" />
+
+    <!-- 강아지 이름을 보여주는 textView -->
+    <TextView
+        android:id="@+id/myDogNameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:padding="5dp"
+        android:text="이름"
+        android:textColor="#000000"
+        />
+
+    <!-- 강아지 나이대를 보여주는 textView -->
+    <TextView
+        android:id="@+id/myDogAgesText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:padding="5dp"
+        android:text="자견/성견"
+        android:textColor="#000000"
+        />
+
+    <!-- 강아지 몸무게를 보여주는 textView -->
+    <TextView
+        android:id="@+id/myDogWeightText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:padding="5dp"
+        android:text="몸무게"
+        android:textColor="#000000"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+    <!-- 삭제 작업을 하는 버튼: 누르면 DeleteDogRequest가 불려 삭제작업을 한다. -->
+    <Button
+        android:id="@+id/delDogButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:background="#ffffff"
+        android:padding="5dp"
+        android:text="삭제"
+        android:textSize="12dp"
+        android:textColor="#000000"
+        android:layout_alignTop="@+id/dogImage"
+        android:layout_marginLeft="10dp"/>
+
+</LinearLayout>

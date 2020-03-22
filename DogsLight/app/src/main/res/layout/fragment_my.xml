@@ -1,0 +1,137 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.user.dogslight.MyFragment">
+
+    <!-- 현재 무슨 일을 하는지 보여주는 창 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="MY PAGE"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <!-- 사용자의 정보를 관리하는 항목을 담은 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+      >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grayupdownline">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="내 정보 관리" />
+        </LinearLayout>
+
+
+        <!-- 비밀번호 변경/ 로그아웃과 같은 작업을 할 수 있도록 하는 listView -->
+        <ListView
+            android:id="@+id/myInfoListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@color/colorPrimaryDark"
+            android:divider="#FFFFFF"
+            android:padding="5dp"
+            ></ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grayupdownline">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="강아지 관리" />
+            <!-- 강아지를 추가할 수 있도록 하는 버튼 : AddDogActivity로 이동한다. -->
+            <Button
+                android:id="@+id/addDogButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="#ffffff"
+                android:text="반려동물 추가" />
+        </LinearLayout>
+        <!-- 사용자의 강아지 정보를 보여주고 수정/ 삭제 작업을 할 수 있도록 하는 listView :
+            항목을 클릭할 시 강아지 정보를 수정할 수 있도록 EditDogActivity로 이동하고,
+            리스트뷰 안의 삭제 버튼을 클릭하면 DeleteDogRequest가 불려 삭제한다. -->
+        <ListView
+            android:id="@+id/myDogListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:listSelector="@color/colorPrimaryDark"
+            android:divider="#FFFFFF"
+            android:padding="5dp"
+           ></ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grayupdownline"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="사료 관리" />
+
+            <!-- 강아지를 추가할 수 있도록 하는 버튼 : AddDogActivity로 이동한다. -->
+            <Button
+                android:id="@+id/addFoodButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="#ffffff"
+                android:text="사료 추가" />
+
+        </LinearLayout>
+        <!-- 사용자의 사료 정보를 보여주고 수정/ 삭제 작업을 할 수 있도록 하는 listView :
+            항목을 클릭할 시 사료 정보를 수정할 수 있도록 EditDogActivity로 이동하고,
+            리스트뷰 안의 삭제 버튼을 클릭하면 DeleteDogFoodRequest가 불려 삭제한다. -->
+        <ListView
+            android:id="@+id/dogFoodListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:listSelector="@color/colorPrimaryDark"
+            android:divider="#FFFFFF"
+            android:padding="5dp"
+           ></ListView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

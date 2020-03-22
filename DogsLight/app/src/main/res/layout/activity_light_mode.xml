@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 현재 무슨 일을 하는지 보여주는 창 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="LED 조절"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/grayline"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+    <!-- 빨간색 LED를 다루는 버튼을 담는 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_wb_incandescent_black_24dp"
+            android:drawableStart="@drawable/ic_wb_incandescent_black_24dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RED"/>
+        <!-- 빨간색 LED를 켜는 버튼 -->
+        <Button
+            android:id="@+id/R_On_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:text="ON" />
+
+        <!-- 빨간색 LED를 끄는 버튼 -->
+        <Button
+            android:id="@+id/R_Off_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:text="OFF" />
+
+    </LinearLayout>
+
+
+    <!-- 초록색 LED를 다루는 버튼을 담는 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_wb_incandescent_black_24dp"
+            android:drawableStart="@drawable/ic_wb_incandescent_black_24dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="GREEN"/>
+        <!-- 초록색 LED를 켜는 버튼 -->
+        <Button
+            android:id="@+id/G_On_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:text="ON" />
+
+        <!-- 초록색 LED를 끄는 버튼 -->
+        <Button
+            android:id="@+id/G_Off_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:text="OFF" />
+
+    </LinearLayout>
+
+
+    <!-- 노란색 LED를 다루는 버튼을 담는 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_wb_incandescent_black_24dp"
+            android:drawableStart="@drawable/ic_wb_incandescent_black_24dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="YELLOW"/>
+
+        <!-- 노란색 LED를 켜는 버튼 -->
+        <Button
+            android:id="@+id/Y_On_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:text="ON" />
+
+        <!-- 노란색 LED를 끄는 버튼 -->
+        <Button
+            android:id="@+id/Y_Off_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:text="OFF" />
+
+    </LinearLayout>
+
+
+    <!-- 모든 LED를 한 번에 다루는 버튼을 담는 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_wb_incandescent_black_24dp"
+            android:drawableStart="@drawable/ic_wb_incandescent_black_24dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:text="ALL"/>
+        <!-- 모든 LED를 켜는 버튼 -->
+        <Button
+            android:id="@+id/All_On_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:text="ON" />
+
+        <!-- 모든 LED를 끄는 버튼 -->
+        <Button
+            android:id="@+id/All_Off_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:text="OFF" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/pinkupdownline"
+        android:padding="20dp"
+        android:gravity="center"
+        android:text="버튼을 눌러주세요."
+        android:id="@+id/commentText"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="400dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/grayline">
+        <TextView
+            android:id="@+id/RED"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+       />
+        <TextView
+            android:id="@+id/GREEN"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            />
+        <TextView
+            android:id="@+id/YELLOW"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            />
+    </LinearLayout>
+</LinearLayout>

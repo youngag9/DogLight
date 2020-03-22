@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- WalkFragment내의 산책 내역을 보여주는 listView에 들어가는 항목 -->
+
+    <!-- 산책 시간을 보여주는 textView -->
+    <TextView
+        android:id="@+id/walkText"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:text="산책기록"
+        android:textColor="#000000"
+        android:textStyle="bold"/>
+
+    <!-- 강아지이름과 산책날짜를 담은 레이아웃 -->
+
+    <!-- 강아지 이름을 보여주는 textView -->
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:padding="3dp"
+            android:text="최윤녕"
+            android:textColor="#000000"
+            android:textColorHint="#ffffffff" />
+
+        <!-- 산책 날짜를 보여주는 textView -->
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:text="2014-03-12"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="3dp"
+            android:textColor="#000000"
+            android:textColorHint="#ffffffff" />
+
+
+</LinearLayout>

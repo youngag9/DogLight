@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <!-- WalkNoticeFragment 안의 산책시 유의사항 listView에 들어가는 항목 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/noticeline">
+
+        <!-- 작성자인 Master를 보여주는 TextView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:padding="3dp"
+            android:drawableLeft="@drawable/ic_sms_black_24dp"
+            android:drawableStart="@drawable/ic_sms_black_24dp"/>
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:padding="3dp"
+            android:drawableLeft="@drawable/ic_sms_black_24dp"
+            android:drawableStart="@drawable/ic_sms_black_24dp"
+            android:textColor="#696969"
+            android:textColorHint="#FFFFFF"
+            android:visibility="invisible"/>
+
+        <!-- 작성날짜를 보여주는 TextView -->
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="3dp"
+            android:text="2017"
+            android:textColor="#696969"
+            android:textColorHint="#FFFFFF" />
+
+    </LinearLayout>
+    <!-- 유의사항 내용을 담는 textView -->
+    <TextView
+        android:id="@+id/noticeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        android:background="@drawable/grayline"
+        android:text="유의사항"
+        android:textColor="#696969"
+        android:textStyle="bold" />
+
+    <!-- Master의 이름과 유의사항 날짜를 담는 레이아웃 -->
+
+</LinearLayout>
